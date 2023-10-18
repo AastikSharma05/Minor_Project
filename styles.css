@@ -1,0 +1,165 @@
+body {
+  background-color: #45b3e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 1000px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-content {
+  overflow: auto;
+}
+
+#chat-box {
+  color: #f3fafd;
+  max-height: 500px;
+  flex-grow: 1;
+
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.bot-message,
+.user-message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: auto;
+}
+
+.user-message {
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+#user-input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+}
+
+#user-input::placeholder {
+  color: #999;
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+}
+
+.bot-logo {
+  height: 60px;
+  margin-right: 2px;
+}
+
+.blue-box {
+  background-color: #2742a9;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.user-logo {
+  margin-left: 10px;
+  align-self: center;
+}
+
+.user-blue-box {
+  background-color: #17665a;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.bot-message,
+.user-message {
+  animation: fade-in 0.5s ease;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #45b3e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-logo {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f6f2d4;
+  position: absolute;
+  top: 45%;
+  left: 47%;
+}
+
+.loading-message {
+  font-size: 18px;
+  color: #f6f2d4;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+
+.loading-spinner {
+  border: 4px solid #f6f2d4;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

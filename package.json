@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "sentiment": "^5.0.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
+  
+}

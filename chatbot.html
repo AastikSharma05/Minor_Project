@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="loading-screen">
+      <div class="loading-logo">ChatBot</div>
+      <div class="loading-message">Processing your request...</div>
+      <div class="loading-spinner"></div>
+    </div>
+
+    <div class="container">
+      <div id="chat-box" class="chat-content">
+        <div class="bot-message">
+          <div class="message-container">
+            <i class="fa-solid fa-robot fa-2xl" class="bot-logo"></i>
+            <div class="blue-box">Hi, What did you want to talk about?</div>
+          </div>
+        </div>
+
+        <div class="user-message">
+          <div class="message-container user-container">
+            <div class="user-blue-box">
+              Hello, Your question will appear here
+            </div>
+            <i class="fa-solid fa-circle-user fa-2xl user-logo"></i>
+          </div>
+        </div>
+      </div>
+
+      <input type="text" id="user-input" placeholder="Type your message..." />
+    </div>
+    <audio id="messageSound" src="message.mp3"></audio>
+    <script
+      src="https://kit.fontawesome.com/6a84af992a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
